@@ -1,37 +1,9 @@
 import React from 'react';
 import './App.css';
 import {shortDate, btnRow} from './utility.js'
+import Logo from './logo.js'
 
 const math = require("mathjs");
-
-function Instructions() {
-  return (
-    <div className = "top-left-column">
-      <p>Instructions: <br />
-        Click on icons below or type in equation. Use "Enter" key or "=" button to calculte. 
-        Will save up to 9 time stamped entries. Click 'c' or type "clear" to clear memory. 
-        Click 'del' or the backspace key to delete the previous character. Incorrect equations 
-        will return an "ERROR" message.<br /> <br /> 
-        Helpful Pointers: <br /> 
-        - Specify 'rad' (Radians) or 'deg' (Degrees) for trigonometirc expressions.<br /> 
-        - Use parentheses! <br />
-        sqrt25 will return an error. <br />
-        sqrt(25) will return 5. 
-      </p>
-  </div>
-  )
-}
-
-function Logo(){
-  return (<div className = "logo">
-          <p> .________________________________.<br />
-              | TERMINAL SCIENTIFIC CALCULATOR |<br />
-              |________________________________|<br /><br />
-              {Date()}
-          </p>
-          </div>
-  )
-}
 
 function Memory(props){
   let memoryArray =  props.value.map(x => <p>{x}</p>);
@@ -137,14 +109,4 @@ class BtnsAndInput extends React.Component {
   }
 }
 
-class Interface extends React.Component {
-  render(){
-    return (
-      <div className = 'body'>
-        <Instructions />
-        <BtnsAndInput />
-      </div>
-    )
-  }
-}
-export default Interface;
+export default BtnsAndInput;
