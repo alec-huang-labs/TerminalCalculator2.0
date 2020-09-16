@@ -5,16 +5,6 @@ import Logo from './logo.js'
 
 const math = require("mathjs");
 
-function Memory(props){
-  let memoryArray =  props.value.map(x => <p>{x}</p>);
-  return (
-    <div> 
-      <Logo /><br />
-      {memoryArray.slice(0,9)}
-    </div>
-  )
-}
-
 class BtnsAndInput extends React.Component {
   constructor(props){
     super(props);
@@ -78,6 +68,7 @@ class BtnsAndInput extends React.Component {
   }
   render() {
     let btnArr = btnRow.map(btn => <button id={btn} onClick={this.handleButton}>{btn}</button>);
+    let memoryArray =  this.state.savedInput.map(x => <p>{x}</p>);
     return (
       <div className = 'container'>
         <div className = 'mid-left-column'>
@@ -102,7 +93,8 @@ class BtnsAndInput extends React.Component {
                     autoFocus/>
         </div>
         <div className="right-column">
-          <Memory value={this.state.savedInput} />
+          <Logo /><br />
+          {memoryArray.slice(0,9)}
         </div>
       </div>
     )
