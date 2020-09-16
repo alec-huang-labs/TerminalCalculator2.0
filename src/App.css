@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --main-text-color: #39FF14;
+  --main-bg-color: black;
+  --main-font-size: 20px;;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 700px){
+  :root{
+    --main-font-size: 16px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media only screen and (max-width: 600px){
+  :root{
+    --main-font-size: 14px;
+  }
+}
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: 'VT323', monospace;
+  font-size: var(--main-font-size);
+}
+.top-left-column{
+  width: 50vw;
+}
+.mid-left-column{
+  width: 50vw;
+}
+.button-row{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 2vh 0vh 2vh 0vh;
+}
+button{
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  border: none;
+  font-family: 'VT323', monospace;
+  font-size: var(--main-font-size);
+}
+button:hover{
+  color:green;
+}
+textarea{
+  display: inline-block;
+  vertical-align: middle;
+  height: var(--main-font-size);
+  background-color: var(--main-bg-color);
+  border: none;
+  color: var(--main-text-color);
+  resize: none;
+  width: 50%;
+  font-family: 'VT323', monospace;
+  font-size: var(--main-font-size);
+}
+button:focus,textarea:focus{
+  outline: none;
+}
+.right-column{
+  position: absolute;
+  top: 0;
+  margin-left: 55vw;
+  width: 40vw;
+}
+.logo {
+  text-align: center;
+  text-overflow: clip
+}
+label{
+  display: inline-block;
+  vertical-align: top;
+}
+.bottom-row{
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  bottom:0px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
