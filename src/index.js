@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BtnsAndInput from './App.js';
+import BtnsAndInput from './btnsAndInput.js';
 import Instructions from './instructions.js'
 
 
