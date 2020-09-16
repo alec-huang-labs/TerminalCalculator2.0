@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.css';
+import './btnsAndInput.css';
 import {shortDate, btnRow} from './utility.js'
 import Logo from './logo.js'
 
 const math = require("mathjs");
-
 class BtnsAndInput extends React.Component {
   constructor(props){
     super(props);
