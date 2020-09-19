@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 import './btnsAndInput.css';
 import {shortDate, btnRow} from './utility.js'
 import Logo from './logo.js'
 
 const math = require("mathjs");
-class BtnsAndInput extends React.Component {
+
+export default class BtnsAndInput extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -66,8 +67,7 @@ class BtnsAndInput extends React.Component {
     })
   }
   render() {
-    let btnArr = btnRow.map(btn => <button id={btn} onClick={this.handleButton}>{btn}</button>);
-    let memoryArray =  this.state.savedInput.map(x => <p>{x}</p>);
+    let btnArr = btnRow.map(btn => <button key={btn}  data-testid={btn} id={btn} onClick={this.handleButton}>{btn}</button>);
     return (
       <div className = 'container'>
         <div className = 'mid-left-column'>
@@ -76,28 +76,27 @@ class BtnsAndInput extends React.Component {
           <div className = "button-row">{btnArr.slice(14,21)}</div>
           <div className = "button-row">{btnArr.slice(21,28)}</div>
           <div className = "button-row"> 
-            <button id="c" onClick={this.clear.bind(this)}>c</button>
-            <button id="=" onClick={this.solve}>=</button>
-            <button id="del" onClick={this.delete.bind(this)}>del</button>
+            <button data-testid="c" id="c" onClick={this.clear.bind(this)}>c</button>
+            <button data-testid="=" id="=" onClick={this.solve}>=</button>
+            <button data-testid='del' id="del" onClick={this.delete.bind(this)}>del</button>
             {btnArr.slice(28,32)}
           </div>
         </div>
         <div className = 'bottom-row'>
           <label>Scientific-Terminal-Calculator: </label>
           <textarea className="userText"
+                    data-testid="userText"
                     style={{rows:1}}
                     onChange={this.handleInput.bind(this)}  
                     value={this.state.userInput}
                     onKeyDown={this.solve}
                     autoFocus/>
         </div>
-        <div className="right-column">
+        <div className="right-column" data-testid='user-output'>
           <Logo /><br />
-          {memoryArray.slice(0,9)}
+          <div data-testid="memory">{this.state.savedInput.map(x => <p key={x} data-testid={x}>{x}</p>)}</div>
         </div>
       </div>
     )
   }
 }
-
-export default BtnsAndInput;

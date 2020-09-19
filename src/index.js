@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import BtnsAndInput from './btnsAndInput.js';
-import Instructions from './instructions.js'
-
+import Instructions from './instructions'
 
 class Interface extends React.Component {
   render(){
@@ -17,6 +16,7 @@ class Interface extends React.Component {
 
 ReactDOM.render(
     <Interface />,
-  document.getElementById('root')
+    document.getElementById('root') || document.createElement('div'),
 );
 
+export default Interface;

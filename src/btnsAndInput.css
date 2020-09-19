@@ -16,6 +16,11 @@
     --main-font-size: 14px;
   }
 }
+@media only screen and (max-height: 600px){
+  .second-top-left-column{
+    display: none;
+  }
+}
 body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -25,6 +30,9 @@ body {
 .top-left-column{
   width: 50vw;
 }
+.second-top-left-column{
+  width: 50vw;
+}
 .mid-left-column{
   width: 50vw;
 }
@@ -32,7 +40,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 2vh 0vh 2vh 0vh;
+  margin: 1.5vh 0vh 1.5vh 0vh;
 }
 button{
   background-color: var(--main-bg-color);
