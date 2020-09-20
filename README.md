@@ -13,4 +13,5 @@ To get the project in your IDE:
 3. Run `npm install` to install the dependencies for the project.
 4. Run `npm start` to view the Calculator in your local broswer
 5. Run `npm test` to run the test files. 
+
 🤓🤓🤓
