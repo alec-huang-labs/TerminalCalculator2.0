@@ -7,7 +7,7 @@ You can view the project [Here](https://alec-huang-labs.github.io/TerminalCalcul
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 To get the project in your IDE:
-1. Open your terminal and change your directory to where you would like the project to be installed. 
+1. Open your terminal and change your directory to where you would like the project to be cloned.
 2. Run `git clone https://github.com/alec-huang-labs/TerminalCalculator2.0.git`. This will clone the repository to your computer. 
 3. Run `npm install` to install the dependencies for the project.
 4. Run `npm start` to view the Calculator in your local broswer
