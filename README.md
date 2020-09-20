@@ -15,4 +15,4 @@ To get the project in your IDE:
 4. Run `npm start` to view the Calculator in your local broswer
 5. Run `npm test` to run the test files. 
 
-🤓🤓🤓
+🤓
